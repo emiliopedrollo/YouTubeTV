@@ -1,5 +1,6 @@
 {
   "name": "youtube-tv",
+  "productName": "YouTube TV",
   "version": "1.0.0",
   "description": "An simple wrapper to allow access youtube.com/tv on a desktop",
   "main": "main.js",
@@ -12,15 +13,19 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "icon.ico"
+        "icon": "icon.ico",
+        "executableName": "YouTube TV"
       },
       "makers": [
         {
+          "name": "@electron-forge/maker-zip"
+        },
+        {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "exe": "YouTube TV",
-            "iconUrl": "file://./icon.ico",
+            "iconUrl": "https://github.com/emiliopedrollo/YouTubeTV/blob/master/icon.ico?raw=true",
             "name": "YouTubeTV",
+            "setupIcon": "icon.ico",
             "loadingGif": "install.gif"
           }
         }
